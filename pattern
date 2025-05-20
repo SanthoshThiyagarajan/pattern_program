@@ -768,6 +768,38 @@ for (int i = 1; i <= n; i++) {
        D e F
        g H i J
        k L m N o
+
+package pattern;
+
+import java.util.Scanner;
+
+public class test_program {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter the number: ");
+		int n = scan.nextInt();
+		char ch = 'a';
+
+		for (int i = 1; i <= n; i++) {
+			for (int j = 1; j <= i; j++) {
+				// Print character and alternate case
+				System.out.print(ch + " ");
+				ch++;
+
+//                // Alternate case without built-in functions
+                if (ch >= 'a' && ch <= 'z') {
+                    ch = (char)(ch - 32); // convert to uppercase
+                } else if (ch >= 'A' && ch <= 'Z') {
+                    ch = (char)(ch + 32); // convert to lowercase
+                }
+			}
+			System.out.println();
+		}
+
+	}
+}
+
+-----------------------------------------------------------------------------------------------------------------
      
 34.    E D C B A
        D C B A
